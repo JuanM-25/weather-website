@@ -36,9 +36,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help Me',
+        title: 'Help',
         name: 'Juan D. Marin',
-        message: 'This is a message in a bottle'
+        message: 'Hmm, looks like we don’t have any help here, sorry :( . Go back to the weather page.'
     })
 })
 
@@ -85,7 +85,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Juano',
+        name: 'Juan D. Marin',
         errorMessage: 'Help article not found'
     })
 })
@@ -93,7 +93,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Juan',
+        name: 'Juan D. Marin',
         errorMessage: 'Page not found'
     })
 })
